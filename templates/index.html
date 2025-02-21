@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Flask App</title>
+    <!-- <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    /> -->
+    <link rel="stylesheet" href="../static/css/style.css" />
+  </head>
+  <body>
+    <h1 class="body-title">Find Product Prices</h1>
+    <form class="form-find-product" id="product-form">
+      <label for="form-find-product-text-input">Enter Product name</label>
+      <input
+        type="text"
+        id="text-input"
+        name="text-input"
+        placeholder="Enter product name"
+      />
+
+      <div id="multi-value-input"></div>
+      <select id="website-select">
+        <option value="Amazon">Amazon</option>
+        <option value="Mercado Livre">Mercado Livre</option>
+        <option value="Shopee">Shopee</option>
+      </select>
+      <button
+        class="form-find-product-addWebsite-button"
+        type="button"
+        role="button"
+        onclick="addItem(document.getElementById('website-select').value)"
+      >
+        Add Website
+      </button>
+      <button class="form-find-product-search-button" ="submit">Search</button>
+    </form>
+
+    <div id="results-container" style="display: none">
+      <div id="results-content"></div>
+    </div>
+
+    <!-- <script src="{{ url_for('static', filename='js/script.js') }}"></script> -->
+    <script src="../static/js/script.js"></script>
+  </body>
+</html>
